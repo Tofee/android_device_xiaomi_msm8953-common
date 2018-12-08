@@ -627,7 +627,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib64/libwvhidl.so
+vendor/lib/libwvhidl.so
 
 # Wi-Fi
 vendor/bin/wcnss_service

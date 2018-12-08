@@ -73,18 +73,4 @@ if [ "$DEVICE" = "mido" ]; then
 
 fi
 
-if [ "$DEVICE" = "tissot" ]; then
-    # Hax for oreo cam hal
-    patchelf --replace-needed libicuuc.so libicuuc-v27.so $DEVICE_BLOB_ROOT/lib/libMiCameraHal.so
-    patchelf --replace-needed libminikin.so libminikin-v27.so $DEVICE_BLOB_ROOT/lib/libMiCameraHal.so
-    patchelf --replace-needed libskia.so libskia-v27.so $DEVICE_BLOB_ROOT/lib/libMiCameraHal.so
-    patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/bin/hw/android.hardware.camera.provider@2.4-service
-    patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib/camera.device@1.0-impl.so
-    patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
-    patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib64/camera.device@1.0-impl.so
-    patchelf --replace-needed vendor.qti.hardware.camera.device@1.0_vendor.so vendor.qti.hardware.camera.device@1.0.so $DEVICE_BLOB_ROOT/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
-    patchelf --set-soname libicuuc-v27.so $DEVICE_BLOB_ROOT/lib/libicuuc-v27.so
-    patchelf --set-soname libminikin-v27.so $DEVICE_BLOB_ROOT/lib/libminikin-v27.so
-fi
-
 "$MY_DIR"/setup-makefiles.sh
