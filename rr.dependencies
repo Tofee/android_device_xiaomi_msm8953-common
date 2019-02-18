@@ -1,0 +1,25 @@
+[
+ {
+   "repository": "ghpranav/kernel_tissot",
+   "target_path": "kernel/xiaomi/msm8953",
+   "branch"     : "lineage-16.0-4.9-treble"
+ },
+ {
+    "repository": "ghpranav/android_device_xiaomi_tissot-1",
+    "target_path": "device/xiaomi/tissot",
+    "branch"     : "9.0"
+ },
+ {
+  "repository" : "ghpranav/proprietary_vendor_xiaomi-1",
+  "target_path": "vendor/xiaomi",
+  "branch"     : "lineage-16.0-4.9-treble"
+ },
+ {
+   "repository": "LineageOS/android_device_qcom_common",
+   "target_path": "device/qcom/common"
+ },
+ {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings"
+ }
+]
